@@ -1,7 +1,52 @@
 .container { 
     display: flex;
-    width: 100%;
+    width: calc(100% - 5rem * 2);
     height: 100vh;
     justify-content: center;
+    flex-direction: column;
+    padding: 0 5rem;
+}
+
+.tabWrapper {
+    display: flex;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.137);
+    flex-direction: row;
     align-items: center;
+    height: 40px;
+    gap: 1px;
+}
+
+.tab {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    width: 0px;
+    overflow: hidden;
+    user-select: none;
+    align-items: center;
+    transition: 0.1s background-color;
+}
+
+.tabContainer {
+    padding: 0 14px;
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    height: 100%;
+    align-items: center;
+}
+
+.tab[data-hovered="true"] {
+    background-color: #0000001a;
+}
+
+.tab[data-active="true"] {
+    background-color: white;
+}
+
+.tab span {
+    font-size: 13px;
 }
