@@ -11,7 +11,7 @@
     display: flex;
     padding: 2rem;
     border-radius: 1rem;
-    background-color: rgba(0, 0, 0, 0.137);
+    background-color: rgba(0, 0, 0, 0.109);
     flex-direction: row;
     align-items: center;
     height: 40px;
@@ -44,7 +44,13 @@
 }
 
 .tab[data-active="true"] {
+    z-index: 1;
     background-color: white;
+    box-shadow: 0 2px 3px 0 rgba(8, 8, 8, 0.075);
+}
+
+.tab[data-transit="true"] > .tab-close {
+    pointer-events: none;
 }
 
 .tab span {

@@ -33,6 +33,7 @@ const Home = () => {
                             index={i}
                             opener={i-1}
                             key={i}
+                            tabs={tabs}
                             onTabClose={onTabClose}
                             {...t}
                         />
@@ -43,7 +44,8 @@ const Home = () => {
                     setTabs([
                         ...tabs || [],
                         sites[Math.floor(Math.random() * sites.length)]
-                    ])
+                    ]);
+                    if(tabs) setActive(tabs.length);
                 }} />
             </div>
         </div>
